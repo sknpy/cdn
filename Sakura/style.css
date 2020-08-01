@@ -12,176 +12,6 @@ Text Domain: sakura
 Tags: 樱花庄的白猫
 */
 
-/************************自定义********************/
-/*主页波浪*/
-@-webkit-keyframes wave1/*Safari and Chrome*/
-{
-0% { left:-1500px;bottom:-5px}
-    50%{ left:0px;bottom:0px}
-    100%{ left:-1500px;bottom:-5px}
-}
- 
-@-webkit-keyframes wave2
-{
-0% { left:-1450px}
-    50%{ left:0px}
-    100%{left:-1450px}
- 
-}
-@keyframes wave1/*Safari and Chrome*/
-{
-0% { left:-1500px;bottom:-5px}
-    50%{ left:0px;bottom:0px}
-    100%{ left:-1500px;bottom:-5px}
-}
- 
-@keyframes wave2
-{
-0% { left:-1450px}
-    50%{ left:0px}
-    100%{left:-1450px}
- 
-}
-#banner_wave_1 {
-    width:auto;
-    height:65px;
-    background:url("https://cdn.jsdelivr.net/gh/sknpy/Sakura_img/images/wave1.png") repeat-x;
-    _filter:alpha(opacity=80);
-    position:absolute;
-    bottom:0;
-    width:400%;
-    left:-236px;
-    z-index:5;
-    opacity:1;
-    transiton-property:opacity,bottom;
-    animation:wave1 90s infinite;
-    -webkit-animation:wave1 90s infinite;
-}
-#banner_wave_2 {
-    width:auto;
-    height:80px;
-    background:url("https://cdn.jsdelivr.net/gh/sknpy/Sakura_img/images/wave2.png") repeat-x;
-    _filter:alpha(opacity=80);
-    position:absolute;
-    bottom:0;
-    width:400%;
-    left:0;
-    z-index:4;
-    opacity:1;
-    transiton-property:opacity,bottom;
-    animation:wave2 90s infinite;
-    -webkit-animation:wave2 90s infinite;
-}
-.banner_wave_hide,.banner_wave_hide_fit_skin {
-    opacity:0 !important;
-    bottom:-999px !important
-}
-@media(max-width:860px) {
-    #banner_wave_1,#banner_wave_2 {
-    display:inline-block;
-    
-}
-@-webkit-keyframes wave1/*Safari and Chrome*/
-{
-0% { left:-750px;bottom:-2px}
-    50%{ left:0px;bottom:0px}
-    100%{ left:-750px;bottom:-2px}
-}
- 
-@-webkit-keyframes wave2
-{
-0% { left:-750px}
-    50%{ left:0px}
-    100%{left:-750px}
- 
-}
-@keyframes wave1/*Safari and Chrome*/
-{
-0% { left:-750px;bottom:-2px}
-    50%{ left:0px;bottom:0px}
-    100%{ left:-750px;bottom:-2px}
-}
- 
-@keyframes wave2
-{
-0% { left:-750px}
-    50%{ left:0px}
-    100%{left:-750px}
- 
-}
-#banner_wave_1 {
-    width:auto;
-    height:65px;
-    background:url("https://cdn.jsdelivr.net/gh/yremp/resource@2.0/img/other/wave1.png") repeat-x;
-    _filter:alpha(opacity=80);
-    position:absolute;
-    bottom:0;
-    width:400%;
-    left:750px;
-    z-index:5;
-    opacity:1;
-    transiton-property:opacity,bottom;
-    animation:wave1 90s infinite;
-    -webkit-animation:wave1 60s infinite;
-}
-#banner_wave_2 {
-    width:auto;
-    height:80px;
-    background:url("https://cdn.jsdelivr.net/gh/yremp/resource@2.0/img/other/wave2.png") repeat-x;
-    _filter:alpha(opacity=80);
-    position:absolute;
-    bottom:0;
-    width:400%;
-    left:0;
-    z-index:4;
-    opacity:1;
-    transiton-property:opacity,bottom;
-    animation:wave2 90s infinite;
-    -webkit-animation:wave2 60s infinite;
- }
-}
-
-
-
-
-
-/* 首页下拉箭头样式*/
-.headertop-bar::after {
-    content: '';
-    width: 150%;
-    height: 4.375rem;
-    background: #fff;
-    left: -25%;
-    bottom: -2.875rem;
-    border-radius: 100%;
-    position: absolute;
-    z-index: 4;
-}
- 
-.headertop-down {
-    position: absolute;
-    bottom: 50px;
-    left: 50%;
-    cursor: pointer;
-    z-index: 5;
-}
-@media (max-width: 860px) {
-    .headertop-down {
-        display: none
-    }
-}
- 
-.headertop-down i {
-    font-size: 28px;
-    color: #fff;
-    -ms-transform: scale(1.5,1); /* IE 9 */
-    -webkit-transform: scale(1.5,1); /* Safari */
-    transform: scale(1.5,1); /* Standard syntax */
-}
-
-
-/*****************************自定义完**************************/
-
 #content {
     animation: main 1s
 }
@@ -8101,6 +7931,7 @@ a.toc-link {
 .top-feature-row {
     width: 100%;
     height: auto;
+    font-family: 'Noto Serif SC';/*这边用原来字体主要是怕聚焦图错位*/
     margin-top: 55px
 }
 
@@ -8481,7 +8312,7 @@ td.hljs-ln-numbers {
 }
 
 .chinese-font {
-    font-family: 'Merriweather Sans', Helvetica, Tahoma, Arial, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft Yahei', 'WenQuanYi Micro Hei', sans-serif
+    font-family: zhanku, 'Merriweather Sans', Helvetica, Tahoma, Arial, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft Yahei', 'WenQuanYi Micro Hei', sans-serif
 }
 
 .chinese-tranditional-font {
@@ -8505,12 +8336,12 @@ td.hljs-ln-numbers {
 }
 
 .serif {
-    font-family: 'Noto Serif SC', 'Source Han Serif SC', 'Source Han Serif', source-han-serif-sc, 'PT Serif', 'SongTi SC', 'MicroSoft Yahei', Georgia, serif
+    font-family: zhanku, 'Noto Serif SC', 'Source Han Serif SC', 'Source Han Serif', source-han-serif-sc, 'PT Serif', 'SongTi SC', 'MicroSoft Yahei', Georgia, serif
 }
 
 @media (max-width:860px) {
     .serif {
-        font-family: 'Merriweather Sans', Helvetica, Tahoma, Arial, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft Yahei', 'WenQuanYi Micro Hei', sans-serif
+        font-family: zhanku, 'Merriweather Sans', Helvetica, Tahoma, Arial, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft Yahei', 'WenQuanYi Micro Hei', sans-serif
     }
 }
 
@@ -8995,3 +8826,186 @@ h1[id*=toc-head]::before,h2[id*=toc-head]::before,h3[id*=toc-head]::before,h4[id
 .bangumi-next i {
     color: orange;
 }
+
+/************************自定义********************/
+/*主页波浪*/
+@-webkit-keyframes wave1/*Safari and Chrome*/
+{
+0% { left:-1500px;bottom:-5px}
+    50%{ left:0px;bottom:0px}
+    100%{ left:-1500px;bottom:-5px}
+}
+ 
+@-webkit-keyframes wave2
+{
+0% { left:-1450px}
+    50%{ left:0px}
+    100%{left:-1450px}
+ 
+}
+@keyframes wave1/*Safari and Chrome*/
+{
+0% { left:-1500px;bottom:-5px}
+    50%{ left:0px;bottom:0px}
+    100%{ left:-1500px;bottom:-5px}
+}
+ 
+@keyframes wave2
+{
+0% { left:-1450px}
+    50%{ left:0px}
+    100%{left:-1450px}
+ 
+}
+#banner_wave_1 {
+    width:auto;
+    height:65px;
+    background:url("https://cdn.jsdelivr.net/gh/sknpy/Sakura_img/images/wave1.png") repeat-x;
+    _filter:alpha(opacity=80);
+    position:absolute;
+    bottom:0;
+    width:400%;
+    left:-236px;
+    z-index:5;
+    opacity:1;
+    transiton-property:opacity,bottom;
+    animation:wave1 90s infinite;
+    -webkit-animation:wave1 90s infinite;
+}
+#banner_wave_2 {
+    width:auto;
+    height:80px;
+    background:url("https://cdn.jsdelivr.net/gh/sknpy/Sakura_img/images/wave2.png") repeat-x;
+    _filter:alpha(opacity=80);
+    position:absolute;
+    bottom:0;
+    width:400%;
+    left:0;
+    z-index:4;
+    opacity:1;
+    transiton-property:opacity,bottom;
+    animation:wave2 90s infinite;
+    -webkit-animation:wave2 90s infinite;
+}
+.banner_wave_hide,.banner_wave_hide_fit_skin {
+    opacity:0 !important;
+    bottom:-999px !important
+}
+@media(max-width:860px) {
+    #banner_wave_1,#banner_wave_2 {
+    display:inline-block;
+    
+}
+@-webkit-keyframes wave1/*Safari and Chrome*/
+{
+0% { left:-750px;bottom:-2px}
+    50%{ left:0px;bottom:0px}
+    100%{ left:-750px;bottom:-2px}
+}
+ 
+@-webkit-keyframes wave2
+{
+0% { left:-750px}
+    50%{ left:0px}
+    100%{left:-750px}
+ 
+}
+@keyframes wave1/*Safari and Chrome*/
+{
+0% { left:-750px;bottom:-2px}
+    50%{ left:0px;bottom:0px}
+    100%{ left:-750px;bottom:-2px}
+}
+ 
+@keyframes wave2
+{
+0% { left:-750px}
+    50%{ left:0px}
+    100%{left:-750px}
+ 
+}
+#banner_wave_1 {
+    width:auto;
+    height:65px;
+    background:url("https://cdn.jsdelivr.net/gh/yremp/resource@2.0/img/other/wave1.png") repeat-x;
+    _filter:alpha(opacity=80);
+    position:absolute;
+    bottom:0;
+    width:400%;
+    left:750px;
+    z-index:5;
+    opacity:1;
+    transiton-property:opacity,bottom;
+    animation:wave1 90s infinite;
+    -webkit-animation:wave1 60s infinite;
+}
+#banner_wave_2 {
+    width:auto;
+    height:80px;
+    background:url("https://cdn.jsdelivr.net/gh/yremp/resource@2.0/img/other/wave2.png") repeat-x;
+    _filter:alpha(opacity=80);
+    position:absolute;
+    bottom:0;
+    width:400%;
+    left:0;
+    z-index:4;
+    opacity:1;
+    transiton-property:opacity,bottom;
+    animation:wave2 90s infinite;
+    -webkit-animation:wave2 60s infinite;
+ }
+}
+
+
+
+/* 首页下拉箭头样式*/
+.headertop-bar::after {
+    content: '';
+    width: 150%;
+    height: 4.375rem;
+    background: #fff;
+    left: -25%;
+    bottom: -2.875rem;
+    border-radius: 100%;
+    position: absolute;
+    z-index: 4;
+}
+ 
+.headertop-down {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    cursor: pointer;
+    z-index: 5;
+}
+@media (max-width: 860px) {
+    .headertop-down {
+        display: none
+    }
+}
+ 
+.headertop-down i {
+    font-size: 28px;
+    color: #fff;
+    -ms-transform: scale(1.5,1); /* IE 9 */
+    -webkit-transform: scale(1.5,1); /* Safari */
+    transform: scale(1.5,1); /* Standard syntax */
+}
+
+
+
+/* 全站字体样式 8262、8285、8290行+'zhanku', | 7881行+font-family: Noto Serif SC;*/
+@font-face {
+font-family: 'zhanku';
+src: url('https://cdn.jsdelivr.net/gh/sknpy/cdn/font/zhanku/zhanku.eot');
+src: url("https://cdn.jsdelivr.net/gh/sknpy/cdn/font/zhanku/zhanku.eot"); /* IE9 */
+src: url("https://cdn.jsdelivr.net/gh/sknpy/cdn/font/zhanku/zhanku.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */ 
+url('https://cdn.jsdelivr.net/gh/sknpy/cdn/font/zhanku/zhanku.woff2') format('woff2'),
+url('https://cdn.jsdelivr.net/gh/sknpy/cdn/font/zhanku/zhanku.woff') format('woff'),/* chrome、firefox */
+url('https://cdn.jsdelivr.net/gh/sknpy/cdn/font/zhanku/zhanku.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+ */
+url('https://cdn.jsdelivr.net/gh/sknpy/cdn/font/zhanku/zhanku.svg') format('svg');/* iOS 4.1- */
+font-weight: normal;
+font-style: normal;
+}
+
+/*****************************自定义完**************************/
