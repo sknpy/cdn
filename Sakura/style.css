@@ -1064,9 +1064,12 @@ a:hover {
 .site-top .lower {
     position: relative;
     display: inline-block;
-    float: right;
-    margin: 15px 0 0 0;
-    font-size: 16px
+    /*float: right;*/
+    /*margin: 15px 0 0 0;*/
+    margin: 15px 0 0 130px;
+    font-size: 16px;
+    left: -50%;
+    pointer-events: auto !important;
 }
 
 @media (max-width:860px) {
@@ -1145,7 +1148,7 @@ a:hover {
 
 @media(max-width:1200px) {
     .site-top .lower nav{
-        right: calc(-150px - 100%);
+        /*right: calc(-150px - 100%);*/
         position: absolute;
         float: right;
         animation: searchbox .2s;
@@ -8312,7 +8315,7 @@ td.hljs-ln-numbers {
 }
 
 .chinese-font {
-    font-family: zhanku, 'Merriweather Sans', Helvetica, Tahoma, Arial, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft Yahei', 'WenQuanYi Micro Hei', sans-serif
+    font-family: 'Merriweather Sans', Helvetica, Tahoma, Arial, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft Yahei', 'WenQuanYi Micro Hei', sans-serif
 }
 
 .chinese-tranditional-font {
@@ -8341,7 +8344,7 @@ td.hljs-ln-numbers {
 
 @media (max-width:860px) {
     .serif {
-        font-family: zhanku, 'Merriweather Sans', Helvetica, Tahoma, Arial, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft Yahei', 'WenQuanYi Micro Hei', sans-serif
+        font-family: 'Merriweather Sans', Helvetica, Tahoma, Arial, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft Yahei', 'WenQuanYi Micro Hei', sans-serif
     }
 }
 
@@ -9006,6 +9009,29 @@ url('https://cdn.jsdelivr.net/gh/sknpy/cdn/font/zhanku/zhanku.ttf') format('true
 url('https://cdn.jsdelivr.net/gh/sknpy/cdn/font/zhanku/zhanku.svg') format('svg');/* iOS 4.1- */
 font-weight: normal;
 font-style: normal;
+}
+
+/* 菜单栏居中 */
+.site-header.is-homepage .lower-cantiner {
+    display: none;
+}
+.site-header.is-homepage.yya .lower-cantiner {
+    display: block;
+}
+.site-header:hover.is-homepage .lower-cantiner {
+    display: block;
+}
+.site-top .lower-cantiner {
+    position: absolute;
+    left: 50%;
+    min-width: 758.4px;
+    pointer-events: none;
+}
+#show-nav.mobile-fit {
+    position: fixed !important;
+    right: 120px;
+    opacity: 0;
+    pointer-events: none;
 }
 
 /*****************************自定义完**************************/

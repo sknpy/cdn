@@ -349,7 +349,8 @@ function checkDarkModeCookie() {
     var dark = getCookie("dark"),
         today = new Date(),
         hour = today.getHours();
-        if ((!dark && (hour > 21 || hour < 7) ) || (dark == '1' && (hour >= 22 || hour <= 6))) {
+        // if ((!dark && (hour > 21 || hour < 7) ) || (dark == '1' && (hour >= 22 || hour <= 6))) {
+        if (false){    
             setTimeout(function () {
                 $("#dark-bg").click();
             }, 100);
